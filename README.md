@@ -1,5 +1,7 @@
 # rcourses
 
+[![Build Status](https://travis-ci.org/compstat-lmu/rcoursesFunctions.svg?branch=master)](https://travis-ci.org/compstat-lmu/rcoursesFunctions.svg?branch=master)
+
 Helper functions for https://github.com/compstat-lmu/rcourses.
 
 ## Installation
