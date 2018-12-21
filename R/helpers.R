@@ -72,3 +72,15 @@ slide = function (...) {
 
   return(strings)
 }
+
+#' @export
+adjust_path = function(path_to_child_folder, rp) {
+  is.child = knitr:::child_mode()
+  function(rp) {
+    if (is.child)
+      rp = file.path(path_to_child_folder, rp)
+    else
+      rp = file.path("figure", rp)
+    rp
+  }
+}
