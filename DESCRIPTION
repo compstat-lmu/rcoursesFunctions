@@ -1,0 +1,22 @@
+Package: rcourses
+Title: Helpers for compstat/rcourses
+Version: 0.1
+Authors@R: 
+    person(given = "Patrick",
+           family = "Schratz",
+           role = c("aut", "cre"),
+           email = "patrick.schratz@gmail.com")
+Description: Helpers for compstat/rcourses
+License: MIT + file LICENSE
+Depends: 
+    dplyr
+Imports: 
+    BBmisc,
+    rmarkdown,
+    stringr
+Suggests: 
+    PBSmodelling
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
