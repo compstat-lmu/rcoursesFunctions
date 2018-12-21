@@ -8,9 +8,8 @@ Authors@R:
            email = "patrick.schratz@gmail.com")
 Description: Helpers for compstat/rcourses
 License: MIT + file LICENSE
-Depends: 
-    dplyr
 Imports: 
+    dplyr,
     BBmisc,
     rmarkdown,
     stringr
