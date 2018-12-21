@@ -7,16 +7,16 @@
 getStructure(type = "chapters", path = getwd())
 }
 \arguments{
-\item{type}{\code{\link{character(1)}}\cr
+\item{type}{(\code{character(1)})\cr
 The first subdirectory of the files. Have to be \code{chapters} or
 \code{exercises}.}
 
-\item{path}{\code{\link{character(1)}}\cr
+\item{path}{(\code{character(1)})\cr
 The working directory of the rcourses repo. Please notice, that every path
 containing \code{/rcourses} will work.}
 }
 \value{
-\code{\link{data.table}}\cr
+\link[data.table:data.table]{data.table::data.table}\cr
 \code{getStructure} returns a \code{data.table} with all the existing
 chapter or exercise files. The data table contains the following variables:
 - course:   Course which contains the file
@@ -25,9 +25,9 @@ chapter or exercise files. The data table contains the following variables:
 }
 \description{
 The function \code{getStructure} reads in the structure of all existing
-Rmd chapters/exercises in the chapters or exercises directiory. This file
+Rmd chapters/exercises in the chapters or exercises directory. This file
 is also needed in the \code{setup.Rmd} file. In the most cases this
-function is used to get the specific directiory a file lies in. Therefore
+function is used to get the specific directory a file lies in. Therefore
 the chapter names have to be unique!
 
 The generation of the structure is done automatically. This is very handy

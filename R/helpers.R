@@ -16,9 +16,9 @@
 #'   resetted after every subsection!
 #'
 #'
-#' @param n [`integer(1)`]\cr
+#' @param n (`integer(1)`)\cr
 #'   The number of exercises shown on the slide.
-#' @return [`character(2)`]\cr
+#' @return (`character(2)`)\cr
 #'   A character vector containing the lines of the exercise slide. This vector
 #'   has the class `exercise_slide` which is needed for the function
 #'   `createCourse`, that it recognize how to deal with the character
@@ -60,12 +60,13 @@ nExercises = function (n) {
 #'   has the class `empty_slide` which is needed for the function
 #'   `createCourse`, that it recognize how to deal with the character
 #'   vector.
-#' @examples
+#' @examples \dontrun{
 #'   test_slide = slide("# Test Slide",
 #'     "The euclidean norm is defined by:",
 #'     "\\[ \\|x\\|_2 = \\left( \\sum\\limits_{i = 1}^n x_i^2 \\right)^{1 / 2} \\]")
 #'
 #'   writeLines(test_slide)
+#'   }
 slide = function (...) {
   strings = unlist(list(...))
   class(strings) = "empty_slide"
@@ -73,6 +74,12 @@ slide = function (...) {
   return(strings)
 }
 
+#' @title Adjust image path
+#' @description Adjust the img path of a chapter
+#'
+#' @param path_to_child_folder (`character(1)`) \cr
+#'   Path to child folder.
+#' @param rp ???
 #' @export
 adjust_path = function(path_to_child_folder, rp) {
   is.child = knitr:::child_mode()

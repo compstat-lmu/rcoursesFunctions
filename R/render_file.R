@@ -3,9 +3,9 @@
 #' @description
 #'   This function creates and render just one slide set.
 #'
-#' @param slide.name [`character(1)`]\cr
+#' @param slide.name (`character(1)`)\cr
 #'   Name of the slide as given from the getStructure function.
-#' @param open.pdf [`character(1)`]\cr
+#' @param open.pdf (`character(1)`)\cr
 #'   A character vector telling whether the resulting PDF file should be opened. Default = FALSE.
 #' @param ...
 #'   Passed to `createCourse()`

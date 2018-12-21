@@ -7,11 +7,11 @@
 nExercises(n)
 }
 \arguments{
-\item{n}{\code{\link{integer(1)}}\cr
+\item{n}{(\code{integer(1)})\cr
 The number of exercises shown on the slide.}
 }
 \value{
-\code{\link{character(2)}}\cr
+(\code{character(2)})\cr
 A character vector containing the lines of the exercise slide. This vector
 has the class \code{exercise_slide} which is needed for the function
 \code{createCourse}, that it recognize how to deal with the character

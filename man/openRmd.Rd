@@ -7,7 +7,7 @@
 openRmd(rmd.file)
 }
 \arguments{
-\item{rmd.file}{\code{\link{character(1)}}\cr
+\item{rmd.file}{(\code{character(1)})\cr
 Slide name.}
 }
 \description{

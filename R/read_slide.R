@@ -4,20 +4,21 @@
 #'   The function `readSlide` gives the path of a specific chapter file.
 #'   This avoids long paths for the child parameter at the Rmd files.
 #'
-#' @param slide.name [`character(1)`]\cr
+#' @param slide.name (`character(1)`)\cr
 #'   The name of a specific file. To see which files are existing use
 #'   `getStructure`.
-#' @param path [`character(1)`]\cr
+#' @param path (`character(1)`)\cr
 #'   The working directory of the rcourses repo. Please notice, that every path
 #'   containing `/rcourses` will work.
-#' @param file [`logical(1)`]\cr
+#' @param file (`logical(1)`)\cr
 #'   Specify if the returned path should contain the file or just the directory
 #'   which contains the file.
-#' @return [`character(1)`]\cr
+#' @return (`character(1)`)\cr
 #'   `readSlide` returns a string containing the path of the file.
-#' @examples
+#' @examples \dontrun{
 #'   (test = readSlide("about_r"))
 #'   file.exists(test)
+#'   }
 #' @export
 readSlide = function (slide.name, path = getwd(), file = TRUE) {
 

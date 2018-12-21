@@ -26,9 +26,11 @@ use \code{\\\\} instead of \code{\\} for latex commands (see example
 below).
 }
 \examples{
+\dontrun{
   test_slide = slide("# Test Slide",
     "The euclidean norm is defined by:",
     "\\\\[ \\\\|x\\\\|_2 = \\\\left( \\\\sum\\\\limits_{i = 1}^n x_i^2 \\\\right)^{1 / 2} \\\\]")
 
   writeLines(test_slide)
+  }
 }

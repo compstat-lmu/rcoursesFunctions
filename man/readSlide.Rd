@@ -7,20 +7,20 @@
 readSlide(slide.name, path = getwd(), file = TRUE)
 }
 \arguments{
-\item{slide.name}{\code{\link{character(1)}}\cr
+\item{slide.name}{(\code{character(1)})\cr
 The name of a specific file. To see which files are existing use
 \code{getStructure}.}
 
-\item{path}{\code{\link{character(1)}}\cr
+\item{path}{(\code{character(1)})\cr
 The working directory of the rcourses repo. Please notice, that every path
 containing \code{/rcourses} will work.}
 
-\item{file}{\code{\link{logical(1)}}\cr
+\item{file}{(\code{logical(1)})\cr
 Specify if the returned path should contain the file or just the directory
 which contains the file.}
 }
 \value{
-\code{\link{character(1)}}\cr
+(\code{character(1)})\cr
 \code{readSlide} returns a string containing the path of the file.
 }
 \description{
@@ -28,6 +28,8 @@ The function \code{readSlide} gives the path of a specific chapter file.
 This avoids long paths for the child parameter at the Rmd files.
 }
 \examples{
+\dontrun{
   (test = readSlide("about_r"))
   file.exists(test)
+  }
 }

@@ -14,13 +14,13 @@
 #'   can use to create a course list and create a course Rmd file with
 #'   `createCourse`.
 #'
-#' @param type [`character(1)`]\cr
+#' @param type (`character(1)`)\cr
 #'   The first subdirectory of the files. Have to be `chapters` or
 #'   `exercises`.
-#' @param path [`character(1)`]\cr
+#' @param path (`character(1)`)\cr
 #'   The working directory of the rcourses repo. Please notice, that every path
 #'   containing `/rcourses` will work.
-#' @return [`data.table`]\cr
+#' @return [data.table::data.table]\cr
 #'   `getStructure` returns a `data.table` with all the existing
 #'   chapter or exercise files. The data table contains the following variables:
 #'     - course:   Course which contains the file

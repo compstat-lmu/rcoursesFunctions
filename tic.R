@@ -1,4 +1,4 @@
-add_package_checks()
+add_package_checks(error_on = "error")
 
 if (Sys.getenv("id_rsa") != "") {
   # pkgdown documentation can be built optionally. Other example criteria:

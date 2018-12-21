@@ -3,7 +3,8 @@
 #' @description
 #'   This function opens a Rmd file. Please use just file names like they are
 #'   named in the getStructure function
-#' @param rmd.file [`character(1)`]\cr
+#' @importFrom utils file.edit
+#' @param rmd.file (`character(1)`)\cr
 #'   Slide name.
 #' @export
 openRmd = function (rmd.file) {

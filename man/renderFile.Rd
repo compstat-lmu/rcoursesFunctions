@@ -7,10 +7,10 @@
 renderFile(slide.name, open.pdf = FALSE, ...)
 }
 \arguments{
-\item{slide.name}{\code{\link{character(1)}}\cr
+\item{slide.name}{(\code{character(1)})\cr
 Name of the slide as given from the getStructure function.}
 
-\item{open.pdf}{\code{\link{character(1)}}\cr
+\item{open.pdf}{(\code{character(1)})\cr
 A character vector telling whether the resulting PDF file should be opened. Default = FALSE.}
 
 \item{...}{Passed to \code{createCourse()}}

@@ -12,82 +12,88 @@ createCourse(title, course, file.name, subtitles = NA, course.list,
   custom.pandoc = "custom_pandoc.tex", xelatex = FALSE)
 }
 \arguments{
-\item{title}{\code{\link{character(1)}}\cr
+\item{title}{(\code{character(1)})\cr
 Title of the course. If this is setted to \code{NA}, than the title must be
 specified via the console.}
 
-\item{course}{\code{\link{character(1)}}\cr
+\item{course}{(\code{character(1)})\cr
 This is the directory name for the course (e. g. \code{basis}).}
 
-\item{file.name}{\code{\link{character(1)}}\cr
+\item{file.name}{(\code{character(1)})\cr
 Name for the \code{Rmd} file.}
 
-\item{subtitles}{\code{\link{character}}\cr
+\item{subtitles}{\link{character}\cr
 Subtitle of the chapters. The length have to match the length of the
 \code{course.list} object.}
 
 \item{course.list}{\code{\link{list}}\cr
 The list object containing the course structure.}
 
-\item{path}{\code{\link{character(1)}}\cr
+\item{path}{(\code{character(1)})\cr
 Path to the r courses repo.}
 
-\item{render}{\code{\link{logical(1)}}\cr
+\item{render}{(\code{logical(1)})\cr
 If the created file should be rendered after creation, than set this
 parameter to TRUE (default).}
 
-\item{suppress}{\code{\link{logical(1)}}\cr
+\item{suppress}{(\code{logical(1)})\cr
 If \code{TRUE} than the messages of the rendering will be suppressed.}
 
-\item{year}{\code{\link{character(1)}}\cr
+\item{year}{(\code{character(1)})\cr
 Year of the course (if \code{NA}, than the year needs be specified via the
 console).}
 
-\item{month}{\code{\link{character(1)}}\cr
+\item{month}{(\code{character(1)})\cr
 Month of the course (if \code{NA}, than the month needs be specified via the
 console).}
 
-\item{author}{\code{\link{character(1)}}\cr
+\item{author}{(\code{character(1)})\cr
 Author of the course (if \code{NA}, than the author needs be specified via the
 console).}
 
-\item{course.date}{\code{\link{character(1)}}\cr
+\item{course.date}{(\code{character(1)})\cr
 When did the course take place (if \code{NA}, than the duration needs be
 specified via the console).}
 
-\item{bibliography}{\code{\link{character(1)}}\cr
+\item{keep.source}{(\code{logical(1)}) \cr
+Whether to keep the generated (LaTeX) source files.}
+
+\item{bibliography}{(\code{character(1)})\cr
 Specify a .bib object in the data folder.}
 
-\item{reset.exercise}{\code{\link{logical(1)}}\cr
+\item{reset.exercise}{(\code{logical(1)})\cr
 Logical parameter which specifies if the exercise counter should be
 resetted after every subsection.}
 
-\item{yaml.subtitle}{{\code{character(1)}}\cr
+\item{yaml.subtitle}{(\code{character(1)})\cr
 Set the subtitle in the yaml header. This will overwrite the subtitle vector
 of length one which is also used in the yaml header (if it is the only
 subtitle for just one section).}
 
-\item{open.pdf}{\code{\link{logical(1)}}\cr
+\item{open.pdf}{(\code{logical(1)})\cr
 If the rendered pdf should be opened after the rendering, than set
 'open.pdf = TRUE'. This is only possible if 'render = TRUE'.}
 
-\item{scope}{\code{\link{character(1)}} \cr
+\item{scope}{(\code{character(1)}) \cr
 Character naming the file in which the scope should be stored. If nothing
 is given, then no scope is created.}
 
-\item{clean.dir}{\code{\link{logical(1)}}\cr
+\item{clean.dir}{(\code{logical(1)})\cr
 Logical value indicating if the cache, files, knit-figures, and .tex files should be
 deleted or not.}
 
-\item{custom.pandoc}{\code{\link{character(1)}}\cr
+\item{template}{(\code{character(1)}) \cr
+Which LaTeX template file to use. Defaults to \code{"preamble.sty"}.}
+
+\item{custom.pandoc}{(\code{character(1)})\cr
 Character string indicating if a custom pandoc should be used or not. If no
 custom pandoc should be used pass \code{custom.pandoc = NULL}.}
 
-\item{xelatex}{\code{\link{character(1)}}\cr
+\item{xelatex}{(\code{character(1)})\cr
 Character string indicating if xelatex should be used for rendering instead of pdflatex.}
 }
 \value{
-\code{\link{character}}\cr
+\link{character}\cr
 A character vector containing the lines of the final Rmd file.
 }
 \description{

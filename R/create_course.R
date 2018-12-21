@@ -12,61 +12,65 @@
 #' @importFrom rmarkdown render
 #' @importFrom BBmisc suppressAll
 #' @importFrom stringr str_replace
-#' @param title [`character(1)`]\cr
+#' @param title (`character(1)`)\cr
 #'   Title of the course. If this is setted to `NA`, than the title must be
 #'   specified via the console.
-#' @param course [`character(1)`]\cr
+#' @param course (`character(1)`)\cr
 #'   This is the directory name for the course (e. g. `basis`).
-#' @param file.name [`character(1)`]\cr
+#' @param file.name (`character(1)`)\cr
 #'   Name for the `Rmd` file.
-#' @param subtitles [`character`]\cr
+#' @param subtitles [character]\cr
 #'   Subtitle of the chapters. The length have to match the length of the
 #'   `course.list` object.
 #' @param course.list [`list`]\cr
 #'   The list object containing the course structure.
-#' @param path [`character(1)`]\cr
+#' @param path (`character(1)`)\cr
 #'   Path to the r courses repo.
-#' @param render [`logical(1)`]\cr
+#' @param render (`logical(1)`)\cr
 #'   If the created file should be rendered after creation, than set this
 #'   parameter to TRUE (default).
-#' @param suppress [`logical(1)`]\cr
+#' @param suppress (`logical(1)`)\cr
 #'   If `TRUE` than the messages of the rendering will be suppressed.
-#' @param year [`character(1)`]\cr
+#' @param year (`character(1)`)\cr
 #'   Year of the course (if `NA`, than the year needs be specified via the
 #'   console).
-#' @param month [`character(1)`]\cr
+#' @param month (`character(1)`)\cr
 #'   Month of the course (if `NA`, than the month needs be specified via the
 #'   console).
-#' @param author [`character(1)`]\cr
+#' @param author (`character(1)`)\cr
 #'   Author of the course (if `NA`, than the author needs be specified via the
 #'   console).
-#' @param course.date [`character(1)`]\cr
+#' @param course.date (`character(1)`)\cr
 #'   When did the course take place (if `NA`, than the duration needs be
 #'   specified via the console).
-#' @param bibliography [`character(1)`]\cr
+#' @param bibliography (`character(1)`)\cr
 #'   Specify a .bib object in the data folder.
-#' @param reset.exercise [`logical(1)`]\cr
+#' @param reset.exercise (`logical(1)`)\cr
 #'   Logical parameter which specifies if the exercise counter should be
 #'   resetted after every subsection.
-#' @param yaml.subtitle {`character(1)`}\cr
+#' @param yaml.subtitle (`character(1)`)\cr
 #'   Set the subtitle in the yaml header. This will overwrite the subtitle vector
 #'   of length one which is also used in the yaml header (if it is the only
 #'   subtitle for just one section).
-#' @param open.pdf [`logical(1)`]\cr
+#' @param open.pdf (`logical(1)`)\cr
 #'   If the rendered pdf should be opened after the rendering, than set
 #'   'open.pdf = TRUE'. This is only possible if 'render = TRUE'.
-#' @param scope [`character(1)`] \cr
+#' @param scope (`character(1)`) \cr
 #'   Character naming the file in which the scope should be stored. If nothing
 #'   is given, then no scope is created.
-#' @param clean.dir [`logical(1)`]\cr
+#' @param clean.dir (`logical(1)`)\cr
 #'   Logical value indicating if the cache, files, knit-figures, and .tex files should be
 #'   deleted or not.
-#' @param custom.pandoc [`character(1)`]\cr
+#' @param custom.pandoc (`character(1)`)\cr
 #'   Character string indicating if a custom pandoc should be used or not. If no
 #'   custom pandoc should be used pass `custom.pandoc = NULL`.
-#' @param xelatex [`character(1)`]\cr
+#' @param xelatex (`character(1)`)\cr
 #'   Character string indicating if xelatex should be used for rendering instead of pdflatex.
-#' @return [`character`]\cr
+#' @param keep.source (`logical(1)`) \cr
+#'   Whether to keep the generated (LaTeX) source files.
+#' @param template (`character(1)`) \cr
+#'   Which LaTeX template file to use. Defaults to `"preamble.sty"`.
+#' @return [character]\cr
 #'   A character vector containing the lines of the final Rmd file.
 #' @export
 createCourse = function (title, course, file.name, subtitles = NA, course.list,
@@ -364,7 +368,7 @@ createCourse = function (title, course, file.name, subtitles = NA, course.list,
                 )
                 # replace "))" with ", myfile))"
                 source.line = str_replace(string = source.line, pattern = "\\)\\)",
-                  replace = ", myfile\\)\\)")
+                  replacement = ", myfile\\)\\)")
               }
 
               course.text[n() + 1] = source.line
