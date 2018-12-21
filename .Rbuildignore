@@ -4,3 +4,4 @@
 ^LICENSE\.md$
 ^rcoursesFunctions\.Rproj$
 ^\.Rproj\.user$
+^_pkgdown\.yml$
